@@ -1,6 +1,6 @@
 public class LivestockProductionManager {
     public void optimizeFeedingSchedule(Livestock livestock) {
-        System.out.println("Optimizing feeding schedule for " + livestock.getType() + "...");
+        System.out.println("Optimizing feeding schedule for " + livestock.getClass() + "...");
 
         try {
             Thread.sleep(10000); // 10000ms = 10s

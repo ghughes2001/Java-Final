@@ -5,20 +5,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="da17f216-6781-4d81-9f55-605d222afe47" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Java-Final.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DecisionMaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DecisionMaker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/IrrigationDecisionMaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/IrrigationDecisionMaker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AdvancedIrrigationStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AdvancedIrrigationStrategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BasicIrrigationStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BasicIrrigationStrategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CarbonFootprint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CarbonFootprint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Cattle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cattle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Chicken.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Chicken.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Cow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IrrigationStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/IrrigationStrategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Livestock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Livestock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LivestockHealthMonitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LivestockHealthMonitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LivestockProductionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LivestockProductionManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Poultry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Poultry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ResourceControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ResourceControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ResourceOptimization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ResourceOptimization.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Sensor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sensor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Sheep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sheep.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SmartIrrigationSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SmartIrrigationSystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SoilMoistureSensor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SoilMoistureSensor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WeatherSensor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WeatherSensor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -63,7 +80,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1714005943979</updated>
-      <workItem from="1714005944426" duration="4707000" />
+      <workItem from="1714005944426" duration="10471000" />
     </task>
     <servers />
   </component>

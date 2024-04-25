@@ -1,4 +1,4 @@
 public interface ResourceOptimization {
-    void optimizeWaterUsage(int irrigationDuration, int irrigationRate, int waterUsed, int numberOfIrrigationSessions);
-    void optimizeEnergyUsage(int powerConsumption, int irrigationDuration);
+    void optimizeWaterUsage(int irrigationDuration, int irrigationRate, double waterUsed, int numberOfIrrigationSessions);
+    void optimizeEnergyUsage(double powerConsumption, double irrigationDuration);
 }
