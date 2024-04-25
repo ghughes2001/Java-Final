@@ -9,20 +9,56 @@ public class IrrigationDecisionMaker implements DecisionMaker{
     }
 
     @Override
-    public void makeFertilizationDecision(String growthStage, String nutrientRequirements, String susceptibilityToDiseases) {
-        Wheat wheat = new Wheat(growthStage, nutrientRequirements, susceptibilityToDiseases);
-        Tomatoes tomo = new Tomatoes(growthStage, nutrientRequirements, susceptibilityToDiseases);
+    public void cornFertilizationDecision(String growthStage, String nutrientRequirements, String susceptibilityToDiseases) {
         Corn corn = new Corn(growthStage, nutrientRequirements, susceptibilityToDiseases);
 
-        if ((corn.getNutrientRequirements().equals("healthy")) || (wheat.getNutrientRequirements().equals("healthy")) || (tomo.getNutrientRequirements().equals("healthy")))
+        if (corn.getNutrientRequirements().equals("healthy"))
         {
-            System.out.println("Irrigation is not needed due to healthy nutrients.");
+            System.out.println("Fertilization is not needed due to healthy nutrients.");
         }
-        else {
-            System.out.println("Irrigation is needed");
+        if (corn.getNutrientRequirements().equals("unhealthy")){
+            System.out.println("Fertilization is needed at convenience");
         }
+        if (corn.getNutrientRequirements().equals("mildly ill")){
+            System.out.println("Fertilization is needed NOW");
+        }
+        if (corn.getNutrientRequirements().equals("sickly")){
+            System.out.println("Fertilization CANNOT wait");
+        }
+    }
+    public void wheatFertilizationDecision(String growthStage, String nutrientRequirements, String susceptibilityToDiseases) {
+        Wheat wheat = new Wheat(growthStage, nutrientRequirements, susceptibilityToDiseases);
 
+        if (wheat.getNutrientRequirements().equals("healthy"))
+        {
+            System.out.println("Fertilization is not needed due to healthy nutrients.");
+        }
+        if (wheat.getNutrientRequirements().equals("unhealthy")){
+            System.out.println("Fertilization is needed at convenience");
+        }
+        if (wheat.getNutrientRequirements().equals("mildly ill")){
+            System.out.println("Fertilization is needed NOW");
+        }
+        if (wheat.getNutrientRequirements().equals("sickly")){
+            System.out.println("Fertilization CANNOT wait");
+        }
+    }
+    public void tomatoesFertilizationDecision(String growthStage, String nutrientRequirements, String susceptibilityToDiseases) {
+        Tomatoes tomo = new Tomatoes(growthStage, nutrientRequirements, susceptibilityToDiseases);
 
+        if (tomo.getNutrientRequirements().equals("healthy"))
+        {
+            System.out.println("Fertilization is not needed due to healthy nutrients.");
+        }
+        if (tomo.getNutrientRequirements().equals("unhealthy")) {
+            System.out.println("Fertilization is needed at convenience");
+        }
+        if (tomo.getNutrientRequirements().equals("mildly ill")){
+            System.out.println("Fertilization is needed NOW");
+        }
+        if (tomo.getNutrientRequirements().equals("sickly")){
+            System.out.println("Fertilization CANNOT wait");
+        }
     }
 
     @Override

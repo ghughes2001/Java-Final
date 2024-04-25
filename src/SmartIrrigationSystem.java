@@ -46,15 +46,12 @@ public class SmartIrrigationSystem {
         System.out.println("Fertilizer applied.");
     }
 
-    public boolean detectPestPresence() {
+    static void detectPestPresence() {
         //assume we randomly detect pests
-        double probability = Math.random();
-        return probability < 0.5; //assuming a 50% chance of detecting pests
-    }
-
-    public double measureNutrientLevel() {
-        //generate random nutrient level between 0 and 100
-        return Math.random() * 100;
+        Random r = new Random();
+        int probability = r.nextInt(15);
+        IrrigationDecisionMaker IDM = new IrrigationDecisionMaker();
+        IDM.makePestControlDecision(probability);
     }
 
     private void viewSensorData() {
@@ -131,11 +128,60 @@ public class SmartIrrigationSystem {
         Cow cow = new Cow("Healthy", "Balanced diet");
         monitor.monitorHealthStatus(cow);
     }
+    public static String detectCropDisease()
+    {
+        Random random = new Random();
+        String[] cropDisease = {"diseases detected", "diseases not detected"};
+        int randomCropDiseaseIndex = random.nextInt(cropDisease.length);
 
-    private void viewCropInformation() {
-        Tomatoes tomatoes = new Tomatoes("Growing", "High", "Diseases not detected");
+        return cropDisease[randomCropDiseaseIndex];
+    }
+    public static String detectCropGrowth()
+    {
+        Random random = new Random();
+        String[] cropGrowth = {"fully grown", "middle stage growth", "hasn't grown yet", "just planted"};
+        int randomCropGrowthIndex = random.nextInt(cropGrowth.length);
+
+        return cropGrowth[randomCropGrowthIndex];
+    }
+    public static String detectCropNutrients()
+    {
+        Random random = new Random();
+        String[] cropNutrients = {"healthy", "unhealthy", "mildly ill", "sickly"};
+        int randomCropNutrientsIndex = random.nextInt(cropNutrients.length);
+
+        return cropNutrients[randomCropNutrientsIndex];
+    }
+
+
+    public static void viewCropInformation() {
+        String tomatoesNutrients = detectCropNutrients();
+        String tomatoesGrowth = detectCropGrowth();
+        String tomatoesDisease = detectCropDisease();
+
+        String wheatNutrients = detectCropNutrients();
+        String wheatGrowth = detectCropGrowth();
+        String wheatDisease = detectCropDisease();
+
+        String cornsNutrients = detectCropNutrients();
+        String cornGrowth = detectCropGrowth();
+        String cornDisease = detectCropDisease();
+
+        Tomatoes tomatoes = new Tomatoes(tomatoesGrowth, tomatoesNutrients, tomatoesDisease);
+        Wheat wheat = new Wheat(wheatGrowth, wheatNutrients, wheatDisease);
+        Corn corn = new Corn(cornGrowth, cornsNutrients, cornDisease);
+
+
         System.out.println("Crop Information:");
         System.out.println(tomatoes.getName() + " - " + tomatoes.getGrowthStage() + " - Nutrient is " + tomatoes.getNutrientRequirements() + " - " + tomatoes.getSusceptibilityToDiseases());
+        System.out.println(wheat.getName() + " - " + wheat.getGrowthStage() + " - Nutrient is " + wheat.getNutrientRequirements() + " - " + wheat.getSusceptibilityToDiseases());
+        System.out.println(corn.getName() + " - " + corn.getGrowthStage() + " - Nutrient is " + corn.getNutrientRequirements() + " - " + corn.getSusceptibilityToDiseases());
+
+        //accessing decisionMaker interface
+        IrrigationDecisionMaker IDM = new IrrigationDecisionMaker();
+        IDM.tomatoesFertilizationDecision(tomatoesGrowth, tomatoesNutrients, tomatoesDisease);
+        IDM.wheatFertilizationDecision(wheatGrowth, wheatNutrients, wheatDisease);
+        IDM.cornFertilizationDecision(cornGrowth, cornsNutrients, cornDisease);
     }
 
 
@@ -223,12 +269,11 @@ public class SmartIrrigationSystem {
         irrigationSystem.generateResourceUsageReport(irrigationSystem.getRandomFrequency(), irrigationSystem.getRandomDuration());
         irrigationSystem.applyFertilizer();
 
-        //Detect pest presence and measure nutrient levels
-        boolean pestDetected = irrigationSystem.detectPestPresence();
-        double nutrientLevel = irrigationSystem.measureNutrientLevel();
-
-        //print results
-        System.out.println("Pest detected: " + pestDetected);
-        System.out.println("Nutrient level in soil: " + nutrientLevel);
+        /*
+        Detect pest presence and measure crop levels
+        And print results
+         */
+        detectPestPresence();
+        viewCropInformation();
     }
 }
